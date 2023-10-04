@@ -7,6 +7,8 @@ console.log(path.sep); // '\'
 
 //拼接绝对路径
 console.log(path.resolve(__dirname,'test'));
+console.log(path.resolve(__dirname,'/test','./index.html'));
+console.log(path.resolve(__dirname,'./test'));
 
 //解析路径
 console.log(path.parse(pathname));
