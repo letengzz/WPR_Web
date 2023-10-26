@@ -1,0 +1,19 @@
+{
+  "name": "pro-test",
+  "version": "1.0.0",
+  "description": "描述",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js",
+    "start": "node index.js"
+  },
+  "author": "hjc",
+  "license": "ISC",
+  "dependencies": {
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "less": "^4.2.0"
+  }
+}

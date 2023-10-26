@@ -1,0 +1,17 @@
+{
+  "name": "yarn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "hjc",
+  "license": "MIT",
+  "dependencies": {
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "less": "^4.2.0"
+  },
+  "scripts": {
+		"server": "node server.js",
+		"start": "node index.js"
+	}
+}
