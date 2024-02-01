@@ -1,4 +1,3 @@
 .idea
 node_modules
-/Vue/Vue3/vue3_computed/.vscode
-/Vue/Vue3/02Core/vue3_computed/.vscode
+.vscode
