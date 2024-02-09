@@ -8,15 +8,9 @@
   </div>
 </template>
 <!-- 编写脚本代码 -->
-<script lang="ts">
+<script setup lang="ts" name="App">
 // JS或TS
   import Person from "./components/person.vue"
-//默认暴露
-export default {
-  name: "App", //组件名
-  components: { Person } //引入的组件
-}
-
 </script>
 <!-- 样式 -->
 <style scoped>

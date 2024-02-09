@@ -1,5 +1,6 @@
 <template>
   <div class="person">
+    <!-- 不需要加.value -->
     <h2>姓名：{{ name }}</h2>
     <h2>年龄：{{ age }}</h2>
     <button @click="changeName">修改名字</button>
@@ -47,17 +48,17 @@ console.log(car)
 
 
 function changeName() {
-  // 注意：name不是响应式的，name.value是响应式的，所以如下代码并不会引起页面的更新。
+  // 注意：name不是响应式的，name.value是响应式的，会引起页面的更新。
   // JS中操作ref对象时候需要.value
-  name.value = 'zhang-san' //注意：此时这么修改name页面是不变化的
-  console.log(name.value) //name确实改了，但name不是响应式的
+  name.value = 'zhang-san'
+  console.log(name.value)
 }
 
 function changeAge() {
-  // 注意：name不是响应式的，name.value是响应式的，所以如下代码并不会引起页面的更新。
+  // 注意：name不是响应式的，name.value是响应式的，会引起页面的更新。
   // JS中操作ref对象时候需要.value
-  age.value += 1 //注意：此时这么修改age页面是不变化的
-  console.log(age.value) //age确实改了，但age不是响应式的
+  age.value += 1
+  console.log(age.value)
 }
 
 function showTel() {
