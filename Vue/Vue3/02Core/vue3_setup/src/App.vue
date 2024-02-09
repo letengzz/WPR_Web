@@ -3,20 +3,19 @@
   <!-- Html -->
   <div class="app">
     <h1>你好 世界</h1>
-<!-- Vue3 可以写多个根标签-->
+    <!-- Vue3 可以写多个根标签-->
     <Person/>
   </div>
 </template>
 <!-- 编写脚本代码 -->
 <script lang="ts">
+// export default {
+//   name: 'App',
+// }
+</script>
+<script setup lang="ts" name="App">
 // JS或TS
-  import Person from "./components/person.vue"
-//默认暴露
-export default {
-  name: "App", //组件名
-  components: { Person } //引入的组件
-}
-
+import Person from "./components/person.vue"
 </script>
 <!-- 样式 -->
 <style scoped>

@@ -42,7 +42,7 @@
 <!--</script>-->
 
 <!-- 下面的写法是setup语法糖 -->
-<script setup lang="ts"  name="Person1">
+<script setup lang="ts"  name="Person">
 console.log("setup")
   // console.log(this) //setup函数中的this是undefined，Vue3中已经弱化this了
   // 数据，原来写在data中（注意：此时的name、age、tel数据都不是响应式数据）
