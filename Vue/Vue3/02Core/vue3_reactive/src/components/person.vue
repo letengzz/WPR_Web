@@ -17,6 +17,7 @@
 import { reactive } from 'vue'
 
 // 数据
+//源对象：{ brand: '奔驰', price: 100 } 响应式对象：car
 let car = reactive({ brand: '奔驰', price: 100 })
 let games = reactive([
   { id: 'test01', name: '英雄联盟' },
