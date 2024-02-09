@@ -17,7 +17,7 @@ let car = reactive({
   price: 100
 })
 
-//解构赋值
+//解构赋值 相当于 let brand = car.brand let price = car.price
 // let {brand, price} = car
 //toRefs接受一个由reactive生成的响应式对象，返回一个由相同key的ref包装的对象
 let {brand, price} = toRefs(car)
