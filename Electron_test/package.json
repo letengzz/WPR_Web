@@ -1,0 +1,15 @@
+{
+  "name": "electron_test",
+  "version": "1.0.0",
+  "description": "hjc demo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "hjc",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.1.0",
+    "nodemon": "^3.1.4"
+  }
+}
