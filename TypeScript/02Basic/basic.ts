@@ -1,53 +1,56 @@
-// 声明完变量直接进行赋值
-// let c: boolean = false;
+// 类型声明:字面量类型
+let e: '你好' //a的值只能为字符串“你好”
+let f: 100 //b的值只能为数字100
+e = '欢迎'//警告：不能将类型“"欢迎"”分配给类型“"你好"”
+f = 200 //警告：不能将类型“200”分配给类型“100”
 
-// 如果变量的声明和赋值是同时进行的，TS可以自动对变量进行类型检测
-let c = false;
-c = true;
+//自动类型判断
+let a: string //变量a只能存储字符串
+let b: number //变量b只能存储数值
+let c: boolean //变量c只能存储布尔值
 
-// 声明一个变量a，同时指定它的类型为number
-let a: number;
+a = 'hello'
+a = 100 //警告：不能将类型“number”分配给类型“string”
 
-// a 的类型设置为了number，在以后的使用过程中a的值只能是数字
-a = 10;
-a = 33;
-// a = 'hello'; // 此行代码会报错，因为变量a的类型是number，不能赋值字符串
+b = 666
+b = '你好'//警告：不能将类型“string”分配给类型“number”
 
-// JS中的函数是不考虑参数的类型和个数的
-// function sum(a, b){
-//     return a + b;
-// }
+c = true
+// c = 666 //警告：不能将类型“number”分配给类型“boolean”
 
-// console.log(sum(123, 456)); // 579
-// console.log(sum(123, "456")); // "123456"
-
-function sum(a: number, b: number): number{
-    return a + b;
+// 参数x必须是数字，参数y也必须是数字，函数返回值也必须是数字
+function demo(x:number,y:number):number{
+ return x + y
 }
 
-let result = sum(123, 456);
-
-// 可以使用 | 来连接多个类型（联合类型）
-let b: "male" | "female";
-b = "male";
-b = "female";
-
-let c: boolean | string;
-c = true;
-c = 'hello';
+demo(100,200)
+demo(100,'200') //警告：类型“string”的参数不能赋给类型“number”的参数
+demo(100,200,300) //警告：应有 2 个参数，但获得 3 个
+demo(100) //警告：应有 2 个参数，但获得 1 个
 
 
-// 类型断言，可以用来告诉解析器变量的实际类型
+let n = 56
+n.toFixed(2)
 /*
-* 语法：
-*   变量 as 类型
-*   <类型>变量
-*
-* */
-//方式一
-let someValue: unknown = "this is a string";
-let strLength: number = (someValue as string).length;
+当执行n.toFixed(2) ，底层做了这几件事：
+ 1.let temp = new Number(42)
+ 2.value = temp.toFixed(2)
+ 3.删除value
+ 4.返回value
+*/
 
-//方式二
-let someValue: unknown = "this is a string";
-let strLength: number = (<string>someValue).length;
+//类型断言
+let someValue1: unknown = "this is a string";
+let strLength1: number = (someValue1 as string).length;
+
+let someValue2: unknown = "this is a string";
+let strLength2: number = (<string>someValue2).length;
+
+//联合类型
+let g: "male" | "female";
+g = "male";
+g = "female";
+
+let h: boolean | string;
+h = true;
+h = 'hello';
